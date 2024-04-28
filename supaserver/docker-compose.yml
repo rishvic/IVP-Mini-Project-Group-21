@@ -1,0 +1,16 @@
+services:
+  supaserver:
+    image: supaserver
+    build:
+      context: .
+    network_mode: host
+    volumes:
+      - "./videos:/videos"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    runtime: nvidia

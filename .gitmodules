@@ -1,0 +1,3 @@
+[submodule "mmagic/mmagic"]
+	path = mmagic/mmagic
+	url = https://github.com/open-mmlab/mmagic.git
